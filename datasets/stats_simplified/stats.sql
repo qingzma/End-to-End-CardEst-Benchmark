@@ -1,4 +1,5 @@
 -- Users
+drop table users;
 CREATE TABLE users (
 Id SERIAL PRIMARY KEY,
 Reputation INTEGER ,
@@ -9,6 +10,7 @@ DownVotes INTEGER
 );
 
 -- Posts
+drop table posts;
 CREATE TABLE posts (
 	Id SERIAL PRIMARY KEY,
 	PostTypeId SMALLINT ,
@@ -23,6 +25,7 @@ CREATE TABLE posts (
 );
 
 -- PostLinks
+drop table postLinks;
 CREATE TABLE postLinks (
 	Id SERIAL PRIMARY KEY,
 	CreationDate TIMESTAMP ,
@@ -32,6 +35,7 @@ CREATE TABLE postLinks (
 );
 
 -- PostHistory
+drop table postHistory;
 CREATE TABLE postHistory (
 	Id SERIAL PRIMARY KEY,
 	PostHistoryTypeId SMALLINT ,
@@ -41,6 +45,7 @@ CREATE TABLE postHistory (
 );
 
 -- Comments
+drop table comments;
 CREATE TABLE comments (
 	Id SERIAL PRIMARY KEY,
 	PostId INTEGER ,
@@ -50,6 +55,7 @@ CREATE TABLE comments (
 );
 
 -- Votes
+drop table votes;
 CREATE TABLE votes (
 	Id SERIAL PRIMARY KEY,
 	PostId INTEGER,
@@ -60,6 +66,7 @@ CREATE TABLE votes (
 );
 
 -- Badges
+drop table badges;
 CREATE TABLE badges (
 	Id SERIAL PRIMARY KEY,
 	UserId INTEGER ,
@@ -67,6 +74,7 @@ CREATE TABLE badges (
 );
 
 -- Tags
+drop table tags;
 CREATE TABLE tags (
 	Id SERIAL PRIMARY KEY,
 	Count INTEGER ,
